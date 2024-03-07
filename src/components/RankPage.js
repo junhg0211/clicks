@@ -7,7 +7,7 @@ function RankPage() {
       <div className="center-container">
         <div className="header-naviation">
           <span className="navigation-button">
-            <Link to="/">⬅️</Link>
+            <Link to="/clicks">⬅️</Link>
           </span>
         </div>
         <h1>Leaderboard</h1>

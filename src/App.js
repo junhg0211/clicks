@@ -9,8 +9,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<TitlePage />}></Route>
-          <Route path="/rank" element={<RankPage />}></Route>
+          <Route path="clicks">
+            <Route index element={<TitlePage />} />
+            <Route path="rank" element={<RankPage />}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

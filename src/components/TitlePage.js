@@ -110,7 +110,7 @@ function TitlePage() {
           </div>
           <div className="footer-navigation">
             <span className="navigation-button">
-              <Link to="/rank">🥇</Link>
+              <Link to="/clicks/rank">🥇</Link>
             </span>
           </div>
         </div>
