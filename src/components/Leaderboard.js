@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import { API_URL } from "../App.js";
 
 function Leaderboard() {
   let [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/clicks?_sort=-clicks&_limit=10")
+    fetch(`${API_URL}/clicks?_sort=-clicks&_limit=20`)
       .then((response) => response.json())
       .then((json) => {
         setLeaderboard(json);

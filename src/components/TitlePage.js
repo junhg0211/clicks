@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { API_URL } from "../App.js";
 
 const NAME_EX = /^[a-zA-Z0-9_\.]*$/;
 
@@ -18,7 +19,7 @@ function TitlePage() {
 
     let newClicks = clicks + 1;
     if (clicks === 0) {
-      fetch(`http://localhost:3001/clicks`, {
+      fetch(`${API_URL}/clicks`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -26,7 +27,7 @@ function TitlePage() {
         body: JSON.stringify({ id: name, clicks: newClicks }),
       });
     } else {
-      fetch(`http://localhost:3001/clicks/${name}`, {
+      fetch(`${API_URL}/clicks/${name}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -44,7 +45,7 @@ function TitlePage() {
       return;
     }
 
-    fetch(`http://localhost:3001/clicks/${name}`)
+    fetch(`${API_URL}/clicks/${name}`)
       .then((response) => {
         if (response.ok) {
           return response.json();
