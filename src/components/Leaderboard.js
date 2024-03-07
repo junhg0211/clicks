@@ -23,7 +23,7 @@ function Leaderboard() {
       </thead>
       <tbody>
         {leaderboard.map((leader, i) => (
-          <tr>
+          <tr key={i}>
             <td>{i + 1}</td>
             <td>{leader["clicks"]}</td>
             <td>{leader["id"]}</td>
