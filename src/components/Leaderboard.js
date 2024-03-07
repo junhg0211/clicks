@@ -5,7 +5,7 @@ function Leaderboard() {
   let [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch(`${API_URL}/clicks?_sort=-clicks&_limit=20`)
+    fetch(`${API_URL}/clicks?_sort=clicks&_order=desc&_limit=20`)
       .then((response) => response.json())
       .then((json) => {
         setLeaderboard(json);
